@@ -32,6 +32,11 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "solidus", "~> 3.0"
 gem 'solidus_auth_devise'
 
+# Go International !
+gem 'solidus_i18n', '~> 2.0'
+gem 'rails-i18n'
+gem 'kaminari-i18n'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
