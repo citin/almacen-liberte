@@ -4,6 +4,7 @@ es:
   spree:
     actions:
       edit: Editar
+      send_email: Enviar email
     add_to_cart: Agregar a la compra
     adjustment: Ajustes
     admin:
@@ -25,6 +26,7 @@ es:
     agree_to_terms_of_service: Aceptar términos de servicio
     all_departments: Todos los departamentes
     alternative_phone: Telefono alternatico
+    applies_to_all_variant_properties: Aplica a toda las propiedades de las variantes
     apply_code: Aplicar código
     back_to_store: Volver a la tienda
     billing_address: Dirección de facturación

@@ -83,7 +83,7 @@ search:
   # only: ["*.rb", "*.html.slim"]
 
   ## If `strict` is `false`, guess usages such as t("categories.#{category}.title"). The default is `true`.
-  strict: false
+  strict: true
 
   ## Multiple scanners can be used. Their results are merged.
   ## The options specified above are passed down to each scanner. Per-scanner options can be specified as well.
@@ -131,9 +131,9 @@ search:
 ## Sometimes, it isn't possible for i18n-tasks to match the key correctly,
 ## e.g. in case of a relative key defined in a helper method.
 ## In these cases you can use the built-in PatternMapper to map patterns to keys, e.g.:
-
-# <% I18n::Tasks.add_scanner 'I18n::Tasks::Scanners::PatternMapper',
-#       only: %w(*.html.haml *.html.slim *.html.erb),
+#
+# <%# I18n::Tasks.add_scanner 'I18n::Tasks::Scanners::PatternMapper',
+#       only: %w(*.html.haml *.html.slim),
 #       patterns: [['= title\b', '.page_title']] %>
 #
 # The PatternMapper can also match key literals via a special %{key} interpolation, e.g.:
