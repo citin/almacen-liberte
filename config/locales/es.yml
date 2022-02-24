@@ -1,0 +1,111 @@
+---
+es:
+  hello: Hola mundo
+  spree:
+    actions:
+      edit: Editar
+    add_to_cart: Agregar a la compra
+    adjustment: Ajustes
+    admin:
+      order:
+        events:
+          approve: Aprobar
+      store_credits:
+        created_at: Creado En
+      users:
+        edit:
+          api_access: Acceso API
+          clear_key: Borrar clave
+          confirm_clear_key: Confirma borrar clave?
+          confirm_regenerate_key: Confirma regenerar clave?
+          generate_key: Generar clave
+          key: Clave
+          no_key: Sin clave
+          regenerate_key: Regenerar clave
+    agree_to_terms_of_service: Aceptar términos de servicio
+    all_departments: Todos los departamentes
+    alternative_phone: Telefono alternatico
+    apply_code: Aplicar código
+    back_to_store: Volver a la tienda
+    billing_address: Dirección de facturación
+    card_code: Código de tarjeta
+    card_number: Número de tarjeta
+    card_type_is: Tipo de tarjeta
+    cart: Compras
+    cart_subtotal: Subtotal
+    checkout: Comprar
+    city: Ciudad
+    company: Empresa
+    confirm: Confirmar
+    continue_shopping: Continuar comprado
+    country: Pais
+    coupon_code: Código de cupón
+    delivery: Entrega
+    empty_cart: Sin compras
+    ending_in: Finaliza en
+    expiration: Vencimiento
+    home: Home
+    i18n:
+      language: Español
+      this_file_language: es
+    item: Item
+    item_total: Total
+    look_for_similar_items: Buscar productos similares
+    minimize_menu: Minimizar menú
+    my_account: Mi cuenta
+    name: Nombre
+    name_contains: Nombre contiene
+    name_on_card: Nombre
+    no_products_found: No se encontraron productos
+    or: o
+    order_number: Número de oden
+    order_summary: Resumen de compras
+    order_total: Total
+    out_of_stock: Sin stock
+    package_from: Envío desde
+    payment_information: Información de pago
+    phone: Teléfono
+    place_order: Lugar de orden
+    powered_by: Powered by
+    price: Precio
+    product_has_no_description: Sin descripción
+    product_not_available_in_this_currency: No disponible
+    promotion: Promoción
+    promotions: Promociones
+    properties: Propiedades
+    qty: qty
+    save_and_continue: Guardar y continuar
+    save_my_address: Guardar mi dirección
+    search: Buscar
+    search_results: Resultados de la búsqueda
+    select: Seleccionar
+    shipment_details: Detalles de envío
+    shipments: Envíos
+    shipping: Envío
+    shipping_address: Dirección de envío
+    shipping_instructions: Intrucciones de envío
+    shipping_method: Método de envío
+    shipping_total: Total
+    shop_by_taxonomy: Comprar por taxonomía
+    shopping_cart: Carro de compras
+    state: Estado
+    store_credit:
+      store_credit: Crédito
+    street_address: Calle
+    street_address_2: Calle (+info)
+    subtotal: Subtotal
+    tax: Impuesto
+    thank_you_for_your_order: Gracias por su compra
+    total: Total
+    tracking: Seguimiento
+    unrecognized_card_type: Tarjeta no reconocida
+    unshippable_items: Envío no disponible
+    update: Actualizar
+    use_billing_address: Usar dirección de facturación
+    use_existing_cc: Usar tarjeta existente
+    use_new_cc_or_payment_method: Usar nueva tarjeta o método de pago
+    variants: Variantes
+    what_is_a_cvv: Qué es un cvv?
+    what_is_this: Qué es esto?
+    your_cart_is_empty: Su tarjeta esta vacía
+    zip: Código postal

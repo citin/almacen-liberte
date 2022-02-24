@@ -29,8 +29,13 @@ Spree.config do |config|
 
   # Uncomment and customize the following line to add custom permission sets
   # to a custom users role:
-  # config.roles.assign_permissions :role_name, ['Spree::PermissionSets::CustomPermissionSet']
-
+  config.roles.assign_permissions :user_management_admin, ['Spree::PermissionSets::UserManagement']
+  config.roles.assign_permissions :product_and_stock_management_admin, [
+    'Spree::PermissionSets::StockManagement',
+    'Spree::PermissionSets::ProductManagement',
+    'Spree::PermissionSets::PromotionManagement'
+  ]
+  config.roles.assign_permissions :order_management_admin, ['Spree::PermissionSets::OrderManagement']
 
   # Frontend:
 
@@ -67,7 +72,7 @@ Spree::Frontend::Config.configure do |config|
 end
 
 Spree::Backend::Config.configure do |config|
-  config.locale = 'en'
+  config.locale = 'es'
 
   # Uncomment and change the following configuration if you want to add
   # a new menu item:

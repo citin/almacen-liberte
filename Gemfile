@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem "solidus"
 gem 'solidus_auth_devise'
 
+# Reports
 gem 'solidus_simple_dash', github: 'magma-labs/solidus_simple_dash', branch: 'chore/dependencies'
 
 # Custom views
@@ -41,6 +42,7 @@ gem 'deface'
 gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n'
 gem 'kaminari-i18n'
+gem 'i18n-tasks', '~> 0.9.37'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

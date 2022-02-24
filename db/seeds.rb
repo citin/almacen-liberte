@@ -8,3 +8,8 @@
 
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
+
+# Create Admin Roles
+Spree::Role.find_or_create_by(name: 'user_management_admin')
+Spree::Role.find_or_create_by(name: 'product_and_stock_management_admin')
+Spree::Role.find_or_create_by(name: 'order_management_admin')
