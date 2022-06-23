@@ -23,6 +23,9 @@ es:
           key: Clave
           no_key: Sin clave
           regenerate_key: Regenerar clave
+      shipping_methods:
+        form:
+         stock_locations_placeholder: Stock locations
     agree_to_terms_of_service: Aceptar términos de servicio
     all_departments: Todos los departamentes
     alternative_phone: Telefono alternatico
