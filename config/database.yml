@@ -24,6 +24,9 @@ default: &default
 development:
   <<: *default
   database: almacen_liberte_development
+  host: "localhost"
+  username: geartranslations
+  password: geartranslations
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -77,7 +80,6 @@ test:
 production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
-
 # Read https://guides.rubyonrails.org/configuring.html#configuring-a-database
 # for a full overview on how database connection configuration can be specified.
 #
