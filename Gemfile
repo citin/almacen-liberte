@@ -44,6 +44,8 @@ gem 'solidus_simple_dash', github: 'magma-labs/solidus_simple_dash', branch: 'ch
 # Custom views
 gem 'deface'
 
+gem 'bootstrap', '~> 5.2.0'
+
 # Go International !
 gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n'
