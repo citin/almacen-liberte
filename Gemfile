@@ -29,7 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Solidus
-gem "solidus"
+gem 'solidus', github: 'solidusio/solidus'
 gem 'solidus_auth_devise'
 
 # Reports
