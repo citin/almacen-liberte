@@ -12,10 +12,6 @@ Spree.config do |config|
   # config.use_legacy_events = false
 end
 
-Spree::Frontend::Config.configure do |config|
-  # No changes
-end
-
 Spree::Backend::Config.configure do |config|
   # No changes
 end

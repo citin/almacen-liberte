@@ -4,13 +4,14 @@
 # Solidus version defaults for preferences that are not overridden
 Spree.load_defaults '3.1.5'
 
+require_relative Rails.root.join('lib/solidus_starter_frontend/config')
 Spree.config do |config|
   # Core:
   # Default currency for new sites
-  config.currency = "USD"
+  config.currency = 'USD'
 
   # from address for transactional emails
-  config.mails_from = "store@example.com"
+  config.mails_from = 'store@example.com'
 
   # Uncomment to stop tracking inventory levels in the application
   # config.track_inventory_levels = false
@@ -45,11 +46,10 @@ Spree.config do |config|
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
 
-
   # Admin:
 
   # Custom logo for the admin
-  config.admin_interface_logo = "logo/liberte.png"
+  config.admin_interface_logo = 'logo/liberte.png'
 
   # Gateway credentials can be configured statically here and referenced from
   # the admin. They can also be fully configured from the admin.
@@ -67,8 +67,8 @@ Spree.config do |config|
   # )
 end
 
-Spree::Frontend::Config.configure do |config|
-  config.locale = 'en'
+SolidusStarterFrontend::Config.configure do |config|
+  config.locale = 'es'
 end
 
 Spree::Backend::Config.configure do |config|
@@ -88,7 +88,7 @@ Spree::Api::Config.configure do |config|
   config.requires_authentication = true
 end
 
-Spree.user_class = "Spree::LegacyUser"
+Spree.user_class = 'Spree::LegacyUser'
 
 # Rules for avoiding to store the current path into session for redirects
 # When at least one rule is matched, the request path will not be stored
