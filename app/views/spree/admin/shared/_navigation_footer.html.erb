@@ -36,5 +36,12 @@
         <% end %>
       </li>
     <% end %>
+
+    <li data-hook="store-frontend-link">
+      <%= link_to admin_logout_path, target: '_blank', :method => :delete  do %>
+        <i class='fa fa-sign-out'></i>
+        Logout
+      <% end %>
+    </li>
   </ul>
 <% end %>

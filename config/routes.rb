@@ -17,7 +17,7 @@ Spree::Core::Engine.routes.draw do
                router_name: :spree
              })
 
-  # resources :users, only: [:edit, :update]
+  # resources :users, only: %i[edit update]
 
   # devise_scope :spree_user do
   #   get '/login', to: 'user_sessions#new', as: :login
