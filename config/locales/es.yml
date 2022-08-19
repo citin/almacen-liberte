@@ -25,7 +25,7 @@ es:
           regenerate_key: Regenerar clave
       shipping_methods:
         form:
-         stock_locations_placeholder: Stock locations
+          stock_locations_placeholder: Stock locations
     agree_to_terms_of_service: Aceptar términos de servicio
     all_departments: Todos los departamentes
     alternative_phone: Telefono alternatico
@@ -71,7 +71,7 @@ es:
     payment_information: Información de pago
     phone: Teléfono
     place_order: Lugar de orden
-    powered_by: Powered by
+    powered_by: Customizado por
     price: Precio
     product_has_no_description: Sin descripción
     product_not_available_in_this_currency: No disponible
