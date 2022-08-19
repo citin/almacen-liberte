@@ -46,6 +46,10 @@ gem 'deface'
 
 gem 'bootstrap', '~> 5.2.0'
 
+# S3 AWS
+gem "aws-sdk-s3", require: false
+gem 'fog-aws'
+
 # Go International !
 gem 'solidus_i18n', '~> 2.0'
 gem 'rails-i18n'
@@ -66,6 +70,8 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  # Shim to load environment variables from .env into ENV in development.
+  gem 'dotenv-rails'
 end
 
 group :test do

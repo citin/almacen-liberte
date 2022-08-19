@@ -116,6 +116,22 @@ GEM
       execjs (~> 2)
     awesome_nested_set (3.5.0)
       activerecord (>= 4.0.0, < 7.1)
+    aws-eventstream (1.2.0)
+    aws-partitions (1.619.0)
+    aws-sdk-core (3.132.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.525.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1, >= 1.6.1)
+    aws-sdk-kms (1.58.0)
+      aws-sdk-core (~> 3, >= 3.127.0)
+      aws-sigv4 (~> 1.1)
+    aws-sdk-s3 (1.114.0)
+      aws-sdk-core (~> 3, >= 3.127.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.4)
+    aws-sigv4 (1.5.1)
+      aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
     bindex (0.8.1)
     bootsnap (1.10.3)
@@ -176,7 +192,12 @@ GEM
     discard (1.2.1)
       activerecord (>= 4.2, < 8)
     docile (1.4.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.11.0)
+    excon (0.92.4)
     execjs (2.8.1)
     factory_bot (4.11.1)
       activesupport (>= 3.0.0)
@@ -192,8 +213,24 @@ GEM
     ffaker (2.21.0)
     ffi (1.15.5)
     fiber-local (1.0.0)
+    fog-aws (3.14.0)
+      fog-core (~> 2.1)
+      fog-json (~> 1.1)
+      fog-xml (~> 0.1)
+    fog-core (2.3.0)
+      builder
+      excon (~> 0.71)
+      formatador (>= 0.2, < 2.0)
+      mime-types
+    fog-json (1.2.0)
+      fog-core
+      multi_json (~> 1.10)
+    fog-xml (0.1.4)
+      fog-core
+      nokogiri (>= 1.5.11, < 2.0.0)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    formatador (1.1.0)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
     gem-release (2.2.2)
@@ -231,6 +268,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    jmespath (1.6.1)
     jqplot-rails (0.3)
       railties
     jquery-rails (4.5.0)
@@ -580,12 +618,15 @@ PLATFORMS
 
 DEPENDENCIES
   apparition (~> 0.6.0)!
+  aws-sdk-s3
   bootsnap (>= 1.4.4)
   bootstrap (~> 5.2.0)
   byebug
   canonical-rails
   capybara (>= 3.26)
   deface
+  dotenv-rails
+  fog-aws
   i18n-tasks (~> 0.9.37)
   jbuilder (~> 2.7)
   kaminari-i18n
