@@ -29,17 +29,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 # Solidus
-# gem 'solidus', github: 'solidusio/solidus'
-
 gem 'solidus_core'
 gem 'solidus_api'
 gem 'solidus_backend'
 gem 'solidus_sample'
-
 gem 'solidus_auth_devise'
-
-# Reports
-gem 'solidus_simple_dash', github: 'magma-labs/solidus_simple_dash', branch: 'chore/dependencies'
 
 # Custom views
 gem 'deface'
