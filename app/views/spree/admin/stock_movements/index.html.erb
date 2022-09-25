@@ -31,6 +31,18 @@
           <%= f.text_field :variant_sku_eq, value: params[:q][:variant_sku_eq] %>
         </div>
       </div>
+      <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="field">
+          <%= label_tag :q_created_at_gteq, "#{t('spree.created_at.from')}" %>
+          <%= f.text_field :created_at_gteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_gteq] %>
+        </div>
+      </div>
+      <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="field">
+          <%= label_tag :q_created_at_lteq, "#{t('spree.created_at.to')}" %>
+          <%= f.text_field :created_at_lteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_lteq] %>
+        </div>
+      </div>
     </div>
 
     <div class="clearfix"></div>
@@ -50,6 +62,7 @@
   </colgroup>
   <thead>
     <tr data-hook="admin_stock_movements_index_headers">
+      <th><%= Spree::StockMovement.human_attribute_name(:created_at) %>
       <th><%= Spree::StockMovement.human_attribute_name(:variant) %>
       <th><%= Spree::StockMovement.human_attribute_name(:quantity) %></th>
       <th><%= Spree::StockMovement.human_attribute_name(:originated_by) %></th>
@@ -58,6 +71,9 @@
   <tbody>
     <% @stock_movements.each do |stock_movement|%>
       <tr id="<%= spree_dom_id stock_movement %>" data-hook="admin_stock_movements_index_rows">
+        <td>
+          <%= stock_movement.created_at %>
+        </td>
         <td>
           <%= display_variant(stock_movement) %>
         </td>

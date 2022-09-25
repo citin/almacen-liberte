@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_01_192097) do
+ActiveRecord::Schema.define(version: 2022_09_25_183054) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -342,6 +342,8 @@ ActiveRecord::Schema.define(version: 2022_02_01_192097) do
     t.integer "store_id"
     t.string "approver_name"
     t.boolean "frontend_viewable", default: true, null: false
+    t.integer "invoice_number"
+    t.date "invoice_date"
     t.index ["approver_id"], name: "index_spree_orders_on_approver_id"
     t.index ["bill_address_id"], name: "index_spree_orders_on_bill_address_id"
     t.index ["completed_at"], name: "index_spree_orders_on_completed_at"

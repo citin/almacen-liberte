@@ -35,11 +35,13 @@ gem 'solidus_core'
 gem 'solidus_api'
 gem 'solidus_backend'
 gem 'solidus_sample'
-
 gem 'solidus_auth_devise'
 
 # Reports
 gem 'solidus_simple_dash', github: 'magma-labs/solidus_simple_dash', branch: 'chore/dependencies'
+
+# Print invoices
+gem 'solidus_print_invoice' , github: 'solidusio-contrib/solidus_print_invoice'
 
 # Custom views
 gem 'deface'
@@ -96,15 +98,4 @@ group :development, :test do
   gem 'rspec-activemodel-mocks', '~> 1.1.0'
   gem 'solidus_dev_support', '~> 2.5'
 end
-gem 'canonical-rails'
-gem 'solidus_support'
-gem 'truncate_html'
-gem 'view_component', '~> 2.46'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'apparition', '~> 0.6.0', github: 'twalpole/apparition'
-  gem 'rails-controller-testing', '~> 1.0.5'
-  gem 'rspec-activemodel-mocks', '~> 1.1.0'
-  gem 'solidus_dev_support', '~> 2.5'
-end

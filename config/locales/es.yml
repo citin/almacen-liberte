@@ -25,7 +25,7 @@ es:
           regenerate_key: Regenerar clave
       shipping_methods:
         form:
-          stock_locations_placeholder: Stock locations
+          stock_locations_placeholder: Ubicaciones de Stock
     agree_to_terms_of_service: Aceptar términos de servicio
     all_departments: Todos los departamentes
     alternative_phone: Telefono alternatico
@@ -45,6 +45,9 @@ es:
     continue_shopping: Continuar comprado
     country: Pais
     coupon_code: Código de cupón
+    created_at: 
+      from: desde
+      to: hasta
     delivery: Entrega
     empty_cart: Sin compras
     ending_in: Finaliza en
@@ -110,6 +113,8 @@ es:
     use_existing_cc: Usar tarjeta existente
     use_new_cc_or_payment_method: Usar nueva tarjeta o método de pago
     variants: Variantes
+    variant: Variante
+
     what_is_a_cvv: Qué es un cvv?
     what_is_this: Qué es esto?
     your_cart_is_empty: Su tarjeta esta vacía
