@@ -69,6 +69,7 @@ es:
     order_number: Número de oden
     order_summary: Resumen de compras
     order_total: Total
+    originator_type: Origen
     out_of_stock: Sin stock
     package_from: Envío desde
     payment_information: Información de pago

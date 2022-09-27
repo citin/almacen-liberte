@@ -34,13 +34,19 @@
       <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="field">
           <%= label_tag :q_created_at_gteq, "#{t('spree.created_at.from')}" %>
-          <%= f.text_field :created_at_gteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_gteq] %>
+          <%= f.text_field :created_at_gteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_gteq], placeholder: 'aaaa-mm-dd' %>
         </div>
       </div>
       <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="field">
           <%= label_tag :q_created_at_lteq, "#{t('spree.created_at.to')}" %>
-          <%= f.text_field :created_at_lteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_lteq] %>
+          <%= f.text_field :created_at_lteq, class: 'datepicker form-control datepicker-from', value: params[:q][:created_at_lteq], placeholder: 'aaaa-mm-dd' %>
+        </div>
+      </div>
+      <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="field">
+          <%= label_tag :q_created_at_lteq, "#{t('spree.originator_type')}" %>
+          <%= f.select :originator_type_eq, Spree::StockMovement.pluck(:originator_type).compact.uniq, { include_blank: true }, { class: 'custom-select' } %>
         </div>
       </div>
     </div>

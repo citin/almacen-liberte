@@ -2,6 +2,6 @@
 
 module Spree
     class StockMovement 
-        self.whitelisted_ransackable_attributes |= ['created_at', 'originator']
+        self.whitelisted_ransackable_attributes |= ['created_at', 'originator_type']
     end
 end
