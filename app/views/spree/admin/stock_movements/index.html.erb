@@ -49,6 +49,11 @@
           <%= f.select :originator_type_eq, Spree::StockMovement.pluck(:originator_type).compact.uniq, { include_blank: true }, { class: 'custom-select' } %>
         </div>
       </div>
+      <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
+        <div class="field">
+          <%= f.select :increases, [['Positivos', "true"], ['Negativos', "false"]], { include_blank: 'Todos' }, { class: 'custom-select' } %>
+        </div>
+      </div>
     </div>
 
     <div class="clearfix"></div>
