@@ -2,6 +2,29 @@
 es:
   hello: Hola mundo
   spree:
+    # < Print Invoice
+    sku: "# Referencia"
+    # item_description: Descripción
+    # options: Opciones
+    # price: Precio
+    qty: Cantidad
+    customer_invoice: "Factura para el cliente"
+    footer_left1: "Devolver en Otro"
+    footer_left2: " 14 días o nunca"
+
+    footer_right1: "Empresa  Teléfono  Web "
+    footer_right2: " My Genial Empresa 040 146 1222 www.visitanosamenudo.com"
+    extra_note: Extra note
+    thanks: Gracias text
+    print_note: "Esta no es la factura original (NO ENVIAR AL CLIENTE)"
+
+    invoice_print: "Imprimir Factura"
+    packaging_slip_print: "Imprimir Recibo para el Embalaje"
+    packaging_slip: "Recibo para el Embalaje"
+
+    invoice_number: Número Factura
+    invoice_date: Expedida el
+    #  >
     actions:
       edit: Editar
       send_email: Enviar email
@@ -11,6 +34,7 @@ es:
       order:
         events:
           approve: Aprobar
+          cancel: Cancelar
       store_credits:
         created_at: Creado En
       users:
@@ -46,8 +70,8 @@ es:
     country: Pais
     coupon_code: Código de cupón
     created_at: 
-      from: desde
-      to: hasta
+      from: Desde
+      to: Hasta
     delivery: Entrega
     empty_cart: Sin compras
     ending_in: Finaliza en
@@ -82,7 +106,6 @@ es:
     promotion: Promoción
     promotions: Promociones
     properties: Propiedades
-    qty: qty
     save_and_continue: Guardar y continuar
     save_my_address: Guardar mi dirección
     search: Buscar
@@ -115,7 +138,6 @@ es:
     use_new_cc_or_payment_method: Usar nueva tarjeta o método de pago
     variants: Variantes
     variant: Variante
-
     what_is_a_cvv: Qué es un cvv?
     what_is_this: Qué es esto?
     your_cart_is_empty: Su tarjeta esta vacía
