@@ -37,9 +37,6 @@ gem 'solidus_backend'
 gem 'solidus_sample'
 gem 'solidus_auth_devise'
 
-# Reports
-gem 'solidus_simple_dash', github: 'magma-labs/solidus_simple_dash', branch: 'chore/dependencies'
-
 # Print invoices
 gem 'solidus_print_invoice' , github: 'solidusio-contrib/solidus_print_invoice'
 
