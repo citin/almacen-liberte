@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
-RSpec.describe UserMailer, type: :mailer do
+RSpec.describe Spree::UserMailer, type: :mailer do
   let!(:store) { create(:store) }
   let(:user) { create(:user) }
 
   before do
     user = create(:user)
-    described_class.reset_password_instructions(user, 'token goes here').deliver_now
+    Spree::UserMailer.reset_password_instructions(user, 'token goes here').deliver_now
     @message = ActionMailer::Base.deliveries.last
   end
 
@@ -31,7 +31,7 @@ RSpec.describe UserMailer, type: :mailer do
 
       context 'body includes' do
         it 'password reset url' do
-          expect(@message.body.raw_source).to include "http://#{store.url}/user/password/edit"
+          expect(@message.body.raw_source).to include "http://#{store.url}/user/spree_user/password/edit"
         end
       end
     end

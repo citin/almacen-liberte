@@ -9,7 +9,7 @@ RSpec.describe 'Address', type: :system, inaccessible: true do
   let!(:order) { create(:order_with_totals, state: 'cart') }
 
   before do
-    visit root_path
+    visit spree.root_path
 
     click_link 'RoR Mug'
     click_button 'add-to-cart-button'
@@ -62,10 +62,10 @@ RSpec.describe 'Address', type: :system, inaccessible: true do
           page.find(@state_name_css).set('Toscana')
 
           select france.name, from: 'Country'
-        end
 
-        expect(page).to have_no_css(@state_name_css)
-        expect(page).to have_no_css(@state_select_css)
+          expect(page).to have_no_css(@state_name_css)
+          expect(page).to have_no_css(@state_select_css)
+        end
       end
     end
   end

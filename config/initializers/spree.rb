@@ -2,7 +2,7 @@
 # See http://docs.solidus.io/Spree/AppConfiguration.html for details
 
 # Solidus version defaults for preferences that are not overridden
-Spree.load_defaults '3.2.2'
+Spree.load_defaults '3.1.5'
 
 require_relative Rails.root.join('lib/solidus_starter_frontend/config')
 Spree.config do |config|
@@ -67,9 +67,9 @@ Spree.config do |config|
   # )
 end
 
-# SolidusStarterFrontend::Config.configure do |config|
-#   config.locale = 'es'
-# end
+SolidusStarterFrontend::Config.configure do |config|
+  config.locale = 'es'
+end
 
 Spree::Backend::Config.configure do |config|
   config.locale = 'es'

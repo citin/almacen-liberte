@@ -15,7 +15,7 @@ RSpec.feature 'Confirmation', type: :system do
   end
 
   scenario 'create a new user', js: true, confirmable: false do
-    visit signup_path
+    visit spree.signup_path
 
     fill_in 'Email', with: 'email@person.com'
     fill_in 'Password:', with: 'password'

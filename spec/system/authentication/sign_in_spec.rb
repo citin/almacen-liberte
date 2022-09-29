@@ -5,7 +5,7 @@ require 'solidus_starter_frontend_helper'
 RSpec.feature 'Sign In', type: :system do
   background do
     @user = create(:user, email: 'email@person.com', password: 'secret', password_confirmation: 'secret')
-    visit login_path
+    visit spree.login_path
   end
 
   scenario 'let a user sign in successfully' do
@@ -29,7 +29,7 @@ RSpec.feature 'Sign In', type: :system do
   end
 
   it "should store the user previous location" do
-    visit account_path
+    visit spree.account_path
     fill_in "Email", with: @user.email
     fill_in "Password", with: @user.password
     click_button "Login"

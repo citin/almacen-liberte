@@ -7,14 +7,14 @@ RSpec.feature 'Change email', type: :system do
     stub_spree_preferences(Spree::Auth::Config, signout_after_password_change: false)
 
     user = create(:user)
-    visit root_path
+    visit spree.root_path
     click_link 'Login'
 
     fill_in 'spree_user[email]', with: user.email
     fill_in 'spree_user[password]', with: 'secret'
     click_button 'Login'
 
-    visit edit_account_path
+    visit spree.edit_account_path
   end
 
   scenario 'work with correct password' do
