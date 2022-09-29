@@ -8,9 +8,10 @@
 # target all components at once.
 
 Spree.config do |config|
-  config.load_defaults('3.0')
+  config.load_defaults('3.1')
   # config.use_legacy_events = false
 end
+
 
 Spree::Backend::Config.configure do |config|
   # No changes
