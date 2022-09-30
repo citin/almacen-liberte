@@ -8,6 +8,8 @@ es:
     # options: Opciones
     # price: Precio
     qty: Cantidad
+    client: Cliente
+    available_store_credit: Credito disponible
     customer_invoice: "Factura para el cliente"
     footer_left1: "Devolver en Otro"
     footer_left2: " 14 días o nunca"
@@ -69,7 +71,7 @@ es:
     continue_shopping: Continuar comprado
     country: Pais
     coupon_code: Código de cupón
-    created_at: 
+    created_at:
       from: Desde
       to: Hasta
     delivery: Entrega
