@@ -8,7 +8,7 @@ require_relative Rails.root.join('lib/solidus_starter_frontend/config')
 Spree.config do |config|
   # Core:
   # Default currency for new sites
-  config.currency = 'USD'
+  config.currency = 'ARS'
 
   # from address for transactional emails
   config.mails_from = 'store@example.com'
@@ -31,17 +31,19 @@ Spree.config do |config|
   # Uncomment and customize the following line to add custom permission sets
   # to a custom users role:
   config.roles.assign_permissions :user_management_admin, ['Spree::PermissionSets::UserManagement']
+
   config.roles.assign_permissions :product_and_stock_management_admin, [
     'Spree::PermissionSets::StockManagement',
     'Spree::PermissionSets::ProductManagement',
     'Spree::PermissionSets::PromotionManagement'
   ]
+
   config.roles.assign_permissions :order_management_admin, ['Spree::PermissionSets::OrderManagement']
 
   # Frontend:
 
   # Custom logo for the frontend
-  config.logo = "logo/liberte.png"
+  config.logo = 'logo/liberte.png'
 
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
