@@ -22,7 +22,7 @@ text "#{I18n.t('spree.client')}: #{@order.email}", align: :right
 
 move_down 4
 
-text "#{I18n.t('spree.available_store_credit')}: #{@order.display_total_available_store_credit.format(with_currency: true)}",
+text "#{I18n.t('spree.available_store_credit')}: #{@order.display_store_credit_remaining_after_capture.format(with_currency: true)}",
      align: :right,
      size: 10
 
