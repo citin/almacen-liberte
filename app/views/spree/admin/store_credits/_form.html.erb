@@ -18,7 +18,7 @@
   <div data-hook="admin_store_credit_memo_field" class="col-12">
     <%= f.field_container :memo do %>
       <%= f.label :memo %>
-      <%= f.text_area :memo, class: "fullwidth" %>
+      <%= f.text_area :memo, class: "fullwidth", value: t('spree.admin.store_credits.text_area_value') %>
       <%= f.error_message_on :memo %>
     <% end %>
   </div>

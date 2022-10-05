@@ -24,7 +24,11 @@ Spree::PaymentMethod.find_by(name: 'Store Credit').update(
   available_to_admin: true
 )
 
-Spree::StoreCreditCategory.find_or_create_by!(name: 'Saldo a cuenta')
+Spree::StoreCreditCategory.delete_all
+Spree::StoreCreditCategory.find_or_create_by!(name: 'Pagofacil')
+Spree::StoreCreditCategory.find_or_create_by!(name: 'Transferencia Bancaria')
+Spree::StoreCreditCategory.find_or_create_by!(name: 'MercadoPago')
+Spree::StoreCreditCategory.find_or_create_by!(name: 'Efectivo/Cantina')
 
 puts 'Return Reasons'
 

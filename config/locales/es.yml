@@ -39,6 +39,7 @@ es:
           cancel: Cancelar
       store_credits:
         created_at: Creado En
+        text_area_value: "Total sin comisiones: "
       users:
         edit:
           api_access: Acceso API
