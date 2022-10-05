@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
@@ -19,10 +11,18 @@ store.update(
   name: 'Almacen Liberte',
   code: 'almacen-liberte',
   url: 'https://almacen-liberte-test.herokuapp.com/',
-  mail_from_address: 'almacen@liberte.com'
+  mail_from_address: 'almacen@liberte.com',
+  default_currency: 'ARS',
+  cart_tax_country_iso: 'AR'
 )
 
 puts 'Store Credit'
+
+Spree::PaymentMethod.find_by(name: 'Store Credit').update(
+  name: 'Credito',
+  description: 'Saldo a cuenta',
+  available_to_admin: true
+)
 
 Spree::StoreCreditCategory.find_or_create_by!(name: 'Saldo a cuenta')
 
@@ -34,11 +34,23 @@ Spree::ReturnReason.find_or_create_by(name: 'Error en el pedido')
 
 puts 'Stock Location'
 
-Spree::StockLocation.find_by(name: 'default').update(name: 'deposito')
+country = Spree::Country.find_by(iso: 'AR')
+
+stock_location = Spree::StockLocation.find_by(name: 'default')
+stock_location.assign_attributes(name: 'deposito', address1: 'Deposito sector 1', city: 'Mar del Plata',
+                                 zipcode: '12345', country: country, state: country.states.first, default: true,
+                                 active: true)
+
+stock_location.save!
 
 puts 'Zones'
 
 Spree::Zone.delete_all
+arg_zone = Spree::Zone.find_or_create_by!(name: 'Argentina', description: 'Todo el territorio nacional')
+
+%w[AR].each do |symbol|
+  arg_zone.zone_members.find_or_create_by!(zoneable: Spree::Country.find_by!(iso: symbol))
+end
 
 puts 'Refund Reasons'
 
@@ -53,4 +65,33 @@ Spree::Role.find_or_create_by(name: 'order_management_admin')
 
 puts 'Shipping'
 
-Spree::ShippingCategory.find_by(name: 'Default').update(name: 'Gratis')
+shipping_category = Spree::ShippingCategory.find_by(name: 'Default')
+shipping_category.update(name: 'Gratis')
+
+puts 'Taxes'
+
+tax_category = Spree::TaxCategory.find_or_create_by!(name: 'Sin Impuestos', default: true)
+
+Spree::ShippingMethod.create!([
+                                {
+                                  name: 'Envio gratis',
+                                  zones: [arg_zone],
+                                  calculator: Spree::Calculator::Shipping::FlatRate.create!,
+                                  tax_category: tax_category,
+                                  shipping_categories: [shipping_category]
+                                }
+                              ])
+
+{
+  'Envio gratis' => [0, 'ARS']
+}.each do |shipping_method_name, (price, currency)|
+  shipping_method = Spree::ShippingMethod.find_by!(name: shipping_method_name)
+  shipping_method.calculator.preferences = {
+    amount: price,
+    currency: currency
+  }
+  shipping_method.calculator.save!
+  shipping_method.save!
+end
+
+# TODO, create tax rate
