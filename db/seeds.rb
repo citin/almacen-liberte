@@ -19,8 +19,9 @@ store.update(
 puts 'Store Credit'
 
 Spree::PaymentMethod.find_by(name: 'Store Credit').update(
-  name: 'Credito',
+  name: 'Saldo a cuenta',
   description: 'Saldo a cuenta',
+  auto_capture: true,
   available_to_admin: true
 )
 
@@ -43,7 +44,7 @@ country = Spree::Country.find_by(iso: 'AR')
 stock_location = Spree::StockLocation.find_by(name: 'default')
 stock_location.assign_attributes(name: 'deposito', address1: 'Deposito sector 1', city: 'Mar del Plata',
                                  zipcode: '12345', country: country, state: country.states.first, default: true,
-                                 active: true)
+                                 active: true, backorderable_default: false, fulfillable: false)
 
 stock_location.save!
 
