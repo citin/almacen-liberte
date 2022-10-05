@@ -27,6 +27,10 @@ es:
     invoice_number: Número Factura
     invoice_date: Expedida el
     #  >
+    all: Todos
+    incomings: Positivos
+    outgoings: Negativos
+    page_results: Resultados por pagina
     actions:
       edit: Editar
       send_email: Enviar email
