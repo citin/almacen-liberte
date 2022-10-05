@@ -26,5 +26,11 @@ module AlmacenLiberte
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.before_initialize do
+      Dir.glob(File.join(File.dirname(__FILE__), '../lib/spree/permission_sets/*.rb')) do |c|
+        require_dependency(c)
+      end
+    end
   end
 end
