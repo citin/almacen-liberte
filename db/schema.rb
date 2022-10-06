@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_25_183054) do
+ActiveRecord::Schema.define(version: 2022_10_06_130227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -387,6 +387,7 @@ ActiveRecord::Schema.define(version: 2022_09_25_183054) do
     t.integer "position", default: 0
     t.boolean "available_to_users", default: true
     t.boolean "available_to_admin", default: true
+    t.string "type_before_removal"
     t.index ["id", "type"], name: "index_spree_payment_methods_on_id_and_type"
   end
 
