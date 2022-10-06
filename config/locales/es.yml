@@ -90,6 +90,7 @@ es:
     item: Item
     item_total: Total
     look_for_similar_items: Buscar productos similares
+    master_sku: Número de referencia único
     minimize_menu: Minimizar menú
     my_account: Mi cuenta
     name: Nombre
@@ -125,7 +126,7 @@ es:
     shipping_instructions: Intrucciones de envío
     shipping_method: Método de envío
     shipping_total: Total
-    shop_by_taxonomy: Comprar por taxonomía
+    shop_by_taxonomy: Por %{taxonomy}
     shopping_cart: Carro de compras
     state: Estado
     store_credit:

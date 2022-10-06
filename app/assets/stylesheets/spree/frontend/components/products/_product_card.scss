@@ -1,6 +1,14 @@
 .product-card {
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  border-radius: 10px;
+  padding: 10px;
+
   &_image {
-    transition: transform .2s;
+    transition: transform 0.2s;
+    min-height: 255px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     img {
       width: 100%;
@@ -27,6 +35,6 @@
   }
 
   &:hover &_image {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 }
