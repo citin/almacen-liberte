@@ -75,7 +75,7 @@ shipping_category.update(name: 'Gratis')
 
 puts 'Taxes'
 
-tax_category = Spree::TaxCategory.find_or_create_by!(name: 'Sin Impuestos', default: true)
+tax_category = Spree::TaxCategory.find_or_create_by!(name: 'Sin Impuestos', is_default: true)
 
 Spree::ShippingMethod.create!([
                                 {
