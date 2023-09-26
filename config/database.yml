@@ -25,8 +25,8 @@ development:
   <<: *default
   database: almacen_liberte_development
   host: "localhost"
-  username: geartranslations
-  password: geartranslations
+  username:
+  password:
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.

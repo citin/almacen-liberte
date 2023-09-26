@@ -2,9 +2,9 @@ Spree::Core::Engine.load_seed if defined?(Spree::Core)
 Spree::Auth::Engine.load_seed if defined?(Spree::Auth)
 
 # Override Default Seeds
-puts '## Overriding default seeds ##'
+puts '## Liberté Custom Config ##'
 
-puts 'Store'
+puts 'Store: Almacen Liberte'
 
 store = Spree::Store.find_by(code: 'sample-store')
 store.update(
@@ -16,7 +16,7 @@ store.update(
   cart_tax_country_iso: 'AR'
 )
 
-puts 'Store Credit'
+puts 'Store Credit: Saldo a cuenta'
 
 Spree::PaymentMethod.find_by(name: 'Store Credit').update(
   name: 'Saldo a cuenta',
@@ -25,19 +25,20 @@ Spree::PaymentMethod.find_by(name: 'Store Credit').update(
   available_to_admin: true
 )
 
+puts 'Store Credit Categories: Pagofacil, Transferencia Bancaria, MercadoPago, Efectivo/Cantina'
 Spree::StoreCreditCategory.delete_all
 Spree::StoreCreditCategory.find_or_create_by!(name: 'Pagofacil')
 Spree::StoreCreditCategory.find_or_create_by!(name: 'Transferencia Bancaria')
 Spree::StoreCreditCategory.find_or_create_by!(name: 'MercadoPago')
 Spree::StoreCreditCategory.find_or_create_by!(name: 'Efectivo/Cantina')
 
-puts 'Return Reasons'
+puts 'Return Reasons: Producto en mal estado, Error en el pedido'
 
 Spree::ReturnReason.delete_all
 Spree::ReturnReason.find_or_create_by(name: 'Producto en mal estado')
 Spree::ReturnReason.find_or_create_by(name: 'Error en el pedido')
 
-puts 'Stock Location'
+puts 'Stock Location: Deposito'
 
 country = Spree::Country.find_by(iso: 'AR')
 
@@ -48,7 +49,7 @@ stock_location.assign_attributes(name: 'deposito', address1: 'Deposito sector 1'
 
 stock_location.save!
 
-puts 'Zones'
+puts 'Zones: Argentina'
 
 Spree::Zone.delete_all
 arg_zone = Spree::Zone.find_or_create_by!(name: 'Argentina', description: 'Todo el territorio nacional')
@@ -57,7 +58,7 @@ arg_zone = Spree::Zone.find_or_create_by!(name: 'Argentina', description: 'Todo 
   arg_zone.zone_members.find_or_create_by!(zoneable: Spree::Country.find_by!(iso: symbol))
 end
 
-puts 'Refund Reasons'
+puts 'Refund Reasons: Devolucion'
 
 Spree::RefundReason.delete_all
 Spree::RefundReason.find_or_create_by!(name: 'Devolucion', mutable: false)
@@ -68,12 +69,12 @@ Spree::Role.find_or_create_by(name: 'user_management_admin')
 Spree::Role.find_or_create_by(name: 'product_and_stock_management_admin')
 Spree::Role.find_or_create_by(name: 'order_management_admin')
 
-puts 'Shipping'
+puts 'Shipping: Envío Gratis'
 
 shipping_category = Spree::ShippingCategory.find_by(name: 'Default')
 shipping_category.update(name: 'Gratis')
 
-puts 'Taxes'
+puts 'Taxes: Sin Impuestos'
 
 tax_category = Spree::TaxCategory.find_or_create_by!(name: 'Sin Impuestos', is_default: true)
 
