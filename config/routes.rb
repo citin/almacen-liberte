@@ -3,6 +3,10 @@
 Spree::Core::Engine.routes.draw do
   root to: 'home#index'
 
+  namespace :admin do
+    root to: 'root#index'
+  end
+
   devise_for(:spree_user, {
                class_name: 'Spree::User',
                controllers: {

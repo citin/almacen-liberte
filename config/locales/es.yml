@@ -1,5 +1,10 @@
 ---
 es:
+  # devise.sessions.spree_user.signed_out
+  devise:
+    sessions:
+      spree_user:
+        signed_out: "Sesión cerrada correctamente."
   hello: Hola mundo
   spree:
     # < Print Invoice
