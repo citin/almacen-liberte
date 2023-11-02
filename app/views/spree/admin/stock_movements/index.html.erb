@@ -58,7 +58,7 @@
       <div class="field-block col-12 col-md-6 col-lg-4 col-xl-3">
         <div class="field">
         <%= label_tag :q_per_page, "#{t('spree.page_results')}" %>
-          <%= select_tag :per_page, options_for_select([25, 50, 100, 200], params[:per_page]), { class: 'custom-select' } %>
+          <%= select_tag :per_page, options_for_select([25, 50, 100, 200, [t('spree.all'), :all]], params[:per_page]), { class: 'custom-select' } %>
         </div>
       </div>
     </div>
