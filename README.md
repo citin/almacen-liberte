@@ -1,24 +1,9 @@
-# README
+# Dignité
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Una adaptación de [Solidus](https://solidus.io/) para el Almacén Social Liberté.
 
-Things you may want to cover:
+## Acceso
 
-* Ruby version
+Temporalmente el sitio se encuentra en su etapa de prueba en [este link](http://82.180.133.75/).
+Para obtener acceso al [panel de administrador](http://82.180.133.75/admin) por favor envíe un correo electronico a [cito.bernardi@gmail.com](mailto:cito.bernardi@gmail.com) identificandose y solicitando las credenciales.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
